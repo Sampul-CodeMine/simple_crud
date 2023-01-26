@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP | AJAX | Javascript</title>
+    <link type="text/css" rel="stylesheet" href="./assets/css/libraries/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/custom.css" type="text/css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="alert-info text-center mb-4 p-3">AJAX - PHP - Javascript | CRUD</h1>
+        <div class="row">
+            <!-- Form to input data starts here   -->
+            <form class="col-md-4" id="myform">
+                <h3 class="alert-warning text-center p-2">Add / Update Record</h3>
+                <div class="form-group">
+                    <input type="hidden" hidden name="stu_id" id="stu_id" class="form-control" value=""> 
+                    <label for="firstname" class="form-lable">First Name</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" title="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="form-lable">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" title="Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="emailID" class="form-lable">Email Address</label>
+                    <input type="email" class="form-control" id="emailID" name="emailID" placeholder="Email Address" title="Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="age" class="form-lable">Age</label>
+                    <input type="number" class="form-control" id="age" name="age" placeholder="Age" title="Age" min="18" max="100">
+                </div>
+                <div class="form-group">
+                    <label for="gender" class="form-lable">Gender</label>
+                    <select class="form-select" id="gender" name="gender">
+                        <option selected>Choose</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary btn-block" type="submit" name="btnSave" id="btnSave"">Save</button>
+                </div>
+                <div id="msg"></div>
+                <div class="mb-3"></div>
+            </form>
+            <!-- Form to input data ends here   -->
+
+            <!-- Table to display data starts here  -->
+            <div class="col-md-8 text-center">
+                <h3 class="alert-warning p-2">Show Information</h3>
+                <table class="table table-responsive table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Full Names</th>
+                            <th scope="col">Email ID</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+            <!-- Table to display data ends here  -->
+        </div>
+    </div>
+    
+    <div>
+        <script src="./assets/js/libraries/popper.js"></script>
+        <script src="./assets/js/libraries/bootstrap.js"></script>
+        <script src="./assets/js/custom_ajax.js"></script>
+    </div>
+</body>
+</html>
